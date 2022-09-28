@@ -1,0 +1,31 @@
+#! /bin/bash
+
+if [ $# -eq 1 ]
+	then
+	if [ -f $1 ]
+		then
+		echo "Type: file"
+	elif [ -d $1 ]
+		then
+		echo "Thpe: directory"
+	else
+		echo "Neither file or directory"
+	fi
+
+	if [ -r $1 ]
+		then
+		echo -n "Readable "
+	fi
+	if [ -w $1 ]
+		then
+		echo -n "Writable "
+	fi
+	if [ -x $1 ] 
+		then 
+		echo -n "Executable "
+	fi
+
+	echo ""
+else
+	echo "$0: missing file path"
+fi

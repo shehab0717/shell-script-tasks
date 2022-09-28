@@ -1,0 +1,12 @@
+#! /bin/bash
+
+if [ $# -eq 1 ]
+	then
+	ls /home/$1
+	echo "copying files to /tmp ...."
+	cp -r /home/$1/* /tmp 2> /dev/null
+	echo "done copying"
+	ps -lu $1
+else
+	echo "$0: missing argument "
+fi

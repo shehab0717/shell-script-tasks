@@ -1,0 +1,10 @@
+#! /bin/bash
+
+if [ $# -gt 0 ]
+	then
+	echo going to $*
+	cd $*
+else
+	echo going to your home..
+	cd
+fi

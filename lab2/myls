@@ -1,0 +1,23 @@
+#! /bin/bash
+
+if [ $# -gt 0 ]
+	then
+	if [ $1 = '-l' ]
+		then
+		echo "list in long format"
+	elif [ $1 = '-a' ]
+		then 
+		echo  "include hidden files"
+	elif [ $1 = '-d' ]
+		then 
+		echo "list directory"
+	elif [ $1 = '-i' ]
+		then
+		echo "list inode number"
+	elif [ $1 = '-R' ]
+		then
+		echo "list recursively"
+	fi
+else
+	ls $*
+fi
